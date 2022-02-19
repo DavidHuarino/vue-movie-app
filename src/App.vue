@@ -1,12 +1,35 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+  </div> -->
+  <div class="wrapper">
+    <the-header />
   </div>
   <router-view/>
 </template>
-
-<style>
+<script>
+import TheHeader from '@/components/TheHeader.vue'
+export default {
+  components: {
+    TheHeader
+  }
+}
+</script>
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 0 2.5rem;
+}
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,5 +49,5 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
